@@ -6,7 +6,7 @@ start_nginx.sh
   ```
   #!/bin/bash
   docker run -d --name nginx \
-              -v /path/to/nginx:/etc/nginx \
+              -v /path/for/nginx/config:/etc/nginx \
               -v /path/for/challenges:/data/letsencrypt \
               -v /path/for/certs:/etc/letsencrypt \
               -p 443:443 -p 80:80 \
