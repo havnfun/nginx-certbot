@@ -19,10 +19,10 @@ certbot.sh
   ```
   #!/bin/bash
   docker run -t --rm \
-        -v /path/for/challenges:/data/letsencrypt \
-        -v /path/for/certs:/etc/letsencrypt \
-        -v /path/for/logs:/var/log/letsencrypt \
-        deliverous/certbot \
+        -v /home/letsencrypt/data:/data/letsencrypt \
+        -v /home/letsencrypt/etc:/etc/letsencrypt \
+        -v /home/letsencrypt/var:/var/log/letsencrypt \
+        certbot/certbot \
         renew \
         --webroot --webroot-path=/data/letsencrypt
   docker kill -s HUP nginx >/dev/null 2>&1
