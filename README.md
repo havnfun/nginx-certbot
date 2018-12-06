@@ -22,7 +22,7 @@ certbot.sh
         -v /path/for/challenges:/data/letsencrypt \
         -v /path/for/certs:/etc/letsencrypt \
         -v /path/for/logs:/var/log/letsencrypt \
-        deliverous/certbot \
+        certbot/certbot \
         renew \
         --webroot --webroot-path=/data/letsencrypt
   docker kill -s HUP nginx >/dev/null 2>&1
